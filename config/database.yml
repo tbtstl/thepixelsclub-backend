@@ -83,5 +83,4 @@ test:
 production:
   <<: *default
   database: thepixelsclubbackend_production
-  username: thepixelsclubbackend
-  password: <%= ENV['THEPIXELS-CLUB-BACKEND_DATABASE_PASSWORD'] %>
+  url: <% ENV['DATABASE_URL'] %>
