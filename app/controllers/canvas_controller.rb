@@ -4,8 +4,8 @@ class CanvasController < ApplicationController
     render json: canvas
   end
 
-  def detail
-    @canvas = Canvas.first
+  def show
+    @canvas = Canvas.find(1)
     render json: @canvas
   end
 

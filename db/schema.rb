@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_08_184557) do
+ActiveRecord::Schema.define(version: 2018_05_09_011553) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,14 @@ ActiveRecord::Schema.define(version: 2018_05_08_184557) do
     t.jsonb "pixels"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "canvases", force: :cascade do |t|
+    t.integer "singleton_guard"
+    t.jsonb "pixels"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["singleton_guard"], name: "index_canvases_on_singleton_guard", unique: true
   end
 
 end
