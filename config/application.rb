@@ -34,4 +34,4 @@ module ThepixelsClubBackend
   end
 end
 
-Rails.application.config.action_cable.allowed_request_origins = ['http://localhost:3000', 'chrome-extension://omalebghpgejjiaoknljcfmglgbpocdp']
+Rails.application.config.action_cable.allowed_request_origins = ['http://localhost:3000', %r{/*.thepixels.club/}]
