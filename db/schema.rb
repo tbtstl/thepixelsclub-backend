@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2018_05_09_011553) do
 
   create_table "canvases", force: :cascade do |t|
     t.integer "singleton_guard"
-    t.jsonb "pixels"
+    t.string "pixels"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["singleton_guard"], name: "index_canvases_on_singleton_guard", unique: true
