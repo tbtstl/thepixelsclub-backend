@@ -34,4 +34,4 @@ module ThepixelsClubBackend
   end
 end
 
-Rails.application.config.action_cable.allowed_request_origins = ['http://localhost:3000', 'https://www.thepixels.club', 'https://thepixels.club'}]
+Rails.application.config.action_cable.allowed_request_origins = ['http://localhost:3000', 'https://www.thepixels.club', 'https://thepixels.club']
